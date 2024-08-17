@@ -64,10 +64,17 @@ const Notification = ({
         <div className={style.block__description}>
           <h2 className={style.header}>{label}</h2>
           <p className={style.description}>{text}</p>
-          <div
-            className={`${style.blocks} ${paused ? style.paused : ""}`}
-            style={{ width: `${progressWidth}%` }}
-          ></div>
+          {status === Status.success ? (
+            <div
+              className={`${style.blocksFirst} ${paused ? style.paused : ""}`}
+              style={{ width: `${progressWidth}%` }}
+            ></div>
+          ) : (
+            <div
+              className={`${style.blocks} ${paused ? style.paused : ""}`}
+              style={{ width: `${progressWidth}%` }}
+            ></div>
+          )}
         </div>
       </div>
     </Modal>

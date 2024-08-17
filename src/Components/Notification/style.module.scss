@@ -33,6 +33,12 @@
       font-weight: 500;
       opacity: 0.5;
     }
+    .blocksFirst {
+      background-color: rgb(22, 153, 22);
+      height: 2px;
+      width: 100%;
+      transition: width 1s linear;
+    }
     .blocks {
       background-color: red;
       height: 2px;
