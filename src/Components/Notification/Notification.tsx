@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import style from "./style.module.scss";
 import { PropInt, Status } from "../../Interfaces/NotificationProp";
 import accept from "./../../Images/accept.png";
@@ -51,6 +51,7 @@ const Notification = ({
   return (
     <Modal>
       <div
+        data-testid="modal"
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
         className={style.notification}
